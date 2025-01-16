@@ -4,7 +4,7 @@ import { GalleryPhotos } from "./components/GalleryPhotos";
 import { InputSearch } from "./components/InputSearch";
 function App() {
   const [data, setData] = useState([]);
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("Montain");
   const defUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ddf08ff8583b8f20bd95ae4a7dd388b&tags=${filter}&tag_mode=all&per_page=&format=json&nojsoncallback=1`;
   async function fetchData(url) {
     try {
@@ -28,7 +28,7 @@ function App() {
         <InputSearch filter={filter} setFilter={setFilter} />
         <FilterCategory filter={filter} setFilter={setFilter} />
         <h2 className="font-Josefin font-400 text-6xl md:text-[2rem] text-[#051C33]">
-          {filter}
+          {filter} Pictures
         </h2>
         <GalleryPhotos data={data} />
       </div>

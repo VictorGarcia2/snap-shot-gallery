@@ -5,7 +5,6 @@
   let id = props.data.id
   let secret = props.data.secret
   let url = `https://live.staticflickr.com/${server}/${id}_${secret}.jpg`
-  console.log(url);
   return (
     <>
       <div className=" mt-8 ">
