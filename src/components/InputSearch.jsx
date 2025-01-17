@@ -3,21 +3,19 @@ function InputSearch({ filter, setFilter }) {
     e.preventDefault()
     const formData = new FormData(e.target) 
     const searchValue = formData.get("search");  
-    console.log(formData.get("search"));
     setFilter(searchValue)
   } 
 
   return (
     <>
     <form action="" onSubmit={handleSubmit}>
-      <div className="bg-[#edeff0] flex items-center  w-[398px] h-[50px]  rounded-md border-4 border-[#D7DBDF]">
+      <div className="bg-[#edeff0] flex items-center  w-[365px] h-[50px]  rounded-md border-4 border-[#D7DBDF]">
         <input
           className=" font-Josefin font-400 bg-transparent px-4 w-full"
           type="text"
           name="search"
           placeholder="Search..."
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
+          onChange={(e) => handleSubmit(e.target.value)}
         />
         <button type="submit" className="bg-[#051C33] w-[73px] h-[50px] -mx-2 rounded-e-md items-center flex justify-center ">
           <svg height="32" width="32" >

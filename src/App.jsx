@@ -24,10 +24,10 @@ function App() {
   return (
     <>
       <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
-        <h1 className="font-Lobster text-6xl md:text-[4rem] mb-9 mt-9 text-[#051C33]">SnapShot</h1>
+        <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">SnapShot</h1>
         <InputSearch filter={filter} setFilter={setFilter} />
         <FilterCategory filter={filter} setFilter={setFilter} />
-        <h2 className="font-Josefin font-400 text-6xl md:text-[2rem] text-[#051C33]">
+        <h2 className="font-Josefin font-400 text-4xl md:text-[2rem] text-[#051C33]">
           {filter} Pictures
         </h2>
         <GalleryPhotos data={data} />
