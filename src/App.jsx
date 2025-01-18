@@ -29,8 +29,8 @@ function App() {
   const loader = () => {
     return (
       <>
-        <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
-          <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">
+        <div className="flex flex-col justify-center items-center  text-center sm:mt-[4rem]">
+          <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9  sm:mt-9 text-[#051C33]">
             SnapShot
           </h1>
           <InputSearch filter={filter} setFilter={setFilter} />
@@ -52,7 +52,7 @@ function App() {
   } else {
     return (
       <>
-        <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
+        <div className="flex flex-col justify-center items-center  text-center sm:mt-[4rem]">
           <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">
             SnapShot
           </h1>
