@@ -40,7 +40,7 @@ function App() {
           </h2>
           <img
             className="w-36 mt-20"
-            src="/public/svg/load/Rolling@4x-1.0s-200px-200px.gif"
+            src="/svg/load/Rolling@4x-1.0s-200px-200px.gif"
             alt=""
           />
         </div>
