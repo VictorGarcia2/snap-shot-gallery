@@ -20,19 +20,51 @@ function App() {
     fetchData(defUrl)
       .then((rs) => setData(rs.photos.photo))
       .catch((error) => console.error(error));
+      setTimeout(() => {
+        setLoading(false);
+      }, 1600);
   }, [defUrl]);
-  return (
-    <>
-      <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
-        <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">SnapShot</h1>
-        <InputSearch filter={filter} setFilter={setFilter} />
-        <FilterCategory filter={filter} setFilter={setFilter} />
-        <h2 className="font-Josefin font-400 text-4xl md:text-[2rem] text-[#051C33]">
-          {filter} Pictures
-        </h2>
-        <GalleryPhotos data={data} />
-      </div>
-    </>
-  );
+  const [load, setLoading] = useState(true);
+
+  const loader = () => {
+    return (
+      <>
+        <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
+          <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">
+            SnapShot
+          </h1>
+          <InputSearch filter={filter} setFilter={setFilter} />
+          <FilterCategory filter={filter} setFilter={setFilter} />
+          <h2 className="font-Josefin font-400 text-4xl md:text-[2rem] text-[#051C33]">
+            {filter} Pictures
+          </h2>
+          <img
+            className="w-36 mt-20"
+            src="/public/svg/load/Rolling@4x-1.0s-200px-200px.gif"
+            alt=""
+          />
+        </div>
+      </>
+    );
+  };
+  if (load) {
+    return loader();
+  } else {
+    return (
+      <>
+        <div className="flex flex-col justify-center items-center  text-center mt-[4rem]">
+          <h1 className="font-Lobster text-6xl font-bold md:text-[4rem] mb-9 mt-9 text-[#051C33]">
+            SnapShot
+          </h1>
+          <InputSearch filter={filter} setFilter={setFilter} />
+          <FilterCategory filter={filter} setFilter={setFilter} />
+          <h2 className="font-Josefin font-400 text-4xl md:text-[2rem] text-[#051C33]">
+            {filter} Pictures
+          </h2>
+          <GalleryPhotos data={data} />
+        </div>
+      </>
+    );
+  }
 }
 export { App };
