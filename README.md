@@ -5,6 +5,8 @@ Snap Shot es una galería de imágenes creada como práctica durante mi aprendiz
 ## Captura de Pantalla
 
 ![Snap Shot](![image](https://github.com/user-attachments/assets/c692bc44-233c-4905-8204-6ec36ec17fc1))
+![image](https://github.com/user-attachments/assets/c8ce8ed3-b6d2-4770-a557-6a66485ff74b)
+
 
 ## Funcionalidades
 
