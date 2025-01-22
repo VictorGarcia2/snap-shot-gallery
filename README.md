@@ -3,8 +3,7 @@
 Snap Shot es una galería de imágenes creada como práctica durante mi aprendizaje en la escuela de Funval. Este proyecto utiliza la API de Flickr para buscar y mostrar imágenes relacionadas con diferentes categorías.
 
 ## Captura de Pantalla
-
-![Snap Shot](![image](https://github.com/user-attachments/assets/c692bc44-233c-4905-8204-6ec36ec17fc1)
+![image](https://github.com/user-attachments/assets/90609364-40ca-4eb3-bf33-4b2fcef198d7)
 
 
 
