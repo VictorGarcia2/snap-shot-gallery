@@ -5,7 +5,8 @@ import { InputSearch } from "./components/InputSearch";
 function App() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("Montain");
-  const defUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ddf08ff8583b8f20bd95ae4a7dd388b&tags=${filter}&tag_mode=all&per_page=20&page=1&format=json&nojsoncallback=1`;
+  const [suma, setSuma] = useState(10)
+  const defUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ddf08ff8583b8f20bd95ae4a7dd388b&tags=${filter}&tag_mode=all&per_page=${suma}&page=1&format=json&nojsoncallback=1`;
   async function fetchData(url) {
     try {
       const response = await fetch(url);
@@ -62,6 +63,7 @@ function App() {
             {filter} Pictures
           </h2>
           <GalleryPhotos data={data} />
+          <button className="w-[365px] my-11 sm:w-[100px] h-[34px] bg-[#051B30] flex items-center justify-center rounded-md text-white" onClick={()=> setSuma(suma + 10) }>Cargar mas</button>
         </div>
       </>
     );
