@@ -5,7 +5,7 @@ import { InputSearch } from "./components/InputSearch";
 function App() {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState("Montain");
-  const defUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ddf08ff8583b8f20bd95ae4a7dd388b&tags=${filter}&tag_mode=all&per_page=&format=json&nojsoncallback=1`;
+  const defUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3ddf08ff8583b8f20bd95ae4a7dd388b&tags=${filter}&tag_mode=all&per_page=20&page=1&format=json&nojsoncallback=1`;
   async function fetchData(url) {
     try {
       const response = await fetch(url);
